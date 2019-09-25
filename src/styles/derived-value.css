@@ -1,0 +1,6 @@
+.derived-value, .derived-value:focus {
+    border: none;
+    outline: none;
+    background: transparent;
+    color: #000;
+}
