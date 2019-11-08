@@ -37,4 +37,4 @@ const SimpleForm = () => {
 #### Resources:
 
 * [Compound Interest Calculator](https://www.thecalculatorsite.com/articles/finance/compound-interest-formula.php)
-* [Blog](https://davesnotes.uk/react-calculator-forms/)
+* [Blog Post](https://www.neohed.com/form-ulas)
