@@ -14,13 +14,22 @@ const ComputedLabel = ({
     useEffect(() => {
         const newDerivedValue = calculateDerivedValue(data);
 
-        if (!isNaN(newDerivedValue) && newDerivedValue !== derivedValue) {
+        if (
+            !isNaN(newDerivedValue)
+            && newDerivedValue !== derivedValue)
+        {
             setDerivedValue(newDerivedValue);
+
             changeHandler({
                 [calculateDerivedValue.name]: newDerivedValue
             })
         }
-    }, [data, derivedValue, calculateDerivedValue, changeHandler]);
+    }, [
+        data,
+        derivedValue,
+        calculateDerivedValue,
+        changeHandler
+    ]);
 
     const renderLabel = label => {
         if (typeof label === 'string') {
@@ -31,10 +40,14 @@ const ComputedLabel = ({
     };
 
     return <>
-        {renderLabel(label)}
+        {
+            renderLabel(label)
+        }
         <input
             type='text'
-            value={formatter(derivedValue)}
+            value={
+                formatter(derivedValue)
+            }
             readOnly
             className="derived-value"
         />

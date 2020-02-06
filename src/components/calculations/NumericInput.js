@@ -9,13 +9,18 @@ const NumericInput = ({
     const propName = Object.getOwnPropertyNames(value)[0];
     const propValue = value[propName];
 
-    const changeHandlerWrapper = e => changeHandler({
-        [propName]: e.target.value
-    });
-
     return <>
-        <label>{label}</label>
-        <input value={propValue} onChange={changeHandlerWrapper} />
+        <label>
+            {
+                label
+            }
+        </label>
+        <input
+            value={propValue}
+            onChange={e => changeHandler({
+                [propName]: e.target.value
+            })}
+        />
     </>
 };
 
